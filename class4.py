@@ -30,6 +30,13 @@ class WordPlay:
 
     def palindromes(self):
         return [i for i in self.list_words if i == i[::-1]]
+    
+    def only(self,L):
+        return [i for i in L if i in L]
+
+    def avoid(self,L):
+        return [i for i in L if i not in L]
+                
 
     
         
@@ -41,4 +48,7 @@ print(f.words_with_length('Hi fellas!'))
 print(f.starts_with("What's good bro. My name is samson"))
 print(f.ends_with('Hi, how are you boss'))
 print(f.palindromes())
+print(f.only(L))
+print(f.avoid(L))
+        
         

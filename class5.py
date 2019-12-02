@@ -14,7 +14,6 @@ class Converter:
         conv_list = {'conv_feet':self.length*12,'conv_yards':self.length*36,'conv_miles':self.length*63360,
                      'conv_kmeters':self.length*39370.079,'conv_meters':self.length*39.37,'conv_centimeters':self.length/2.54,
                      'conv_millimeters':self.length*25.4}
-        
         if self.unit == 'feet':
             return conv_list['conv_feet']
         elif self.unit == 'yards':
@@ -35,21 +34,24 @@ class Converter:
        conv_list = {'conv_inches' :self.length/12,'conv_yards':self.length*3,'conv_miles':self.length*5280,
                     'conv_kmeters':self.length*3280.84,'conv_meters':self.length*3.281,
                     'conv_centimeters':self.length/30.48,'conv_millimeters':self.length/304.8}
-   
-        if self.unit == 'inches':
+
+       if self.unit == 'inches':
             return conv_list['conv_inches']
-        elif self.unit == 'yards':
+       elif self.unit == 'yards':
             return conv_list['conv_yards']
-        elif self.unit == 'miles':
+       elif self.unit == 'miles':
             return conv_list['conv_miles']
-        elif self.unit == 'kilometers':
+       elif self.unit == 'kilometers':
             return conv_list['conv_kmeters']
-        elif self.unit == 'meters':
+       elif self.unit == 'meters':
             return conv_list['conv_meters']
-        elif self.unit == 'centimeters':
+       elif self.unit == 'centimeters':
             return conv_list['conv_centimeters']
-        elif self.unit == 'millimeters':
+       elif self.unit == 'millimeters':
             return conv_list['conv_millimeters']
+       
+
+        
     def yards(self):
         conv_list = {'conv_feet':self.length/3,'conv_inches':self.length/36,'conv_miles':self.length*1760,
                      'conv_kmeters':self.length*1093.613,'conv_meters':self.length*1.094,'conv_centimeters':self.length*91.44,
@@ -72,8 +74,8 @@ class Converter:
 
     def miles(self):
         conv_list = {'conv_feet':self.length/5280,'conv_yards':self.length/1760,'conv_inches':self.length/63360,
-                     'conv_kmeters' = self.length/1.609,'conv_meters' = self.length/1609.344,
-                     'conv_centimeters' = self.length/160934.4,'conv_millimeters' = self.length*1.609e+6}
+                     'conv_kmeters':self.length/1.609,'conv_meters':self.length/1609.344,
+                     'conv_centimeters' : self.length/160934.4,'conv_millimeters' : self.length*1.609e+6}
 
         if self.unit == 'inches':
             return conv_list['conv_inches']
@@ -93,28 +95,28 @@ class Converter:
 
     def kilometers(self):
        conv_list = {'conv_feet':self.length/3280.84,'conv_yards':self.length/1093.613,'conv_miles':self.length*1.609,
-                    'conv_meters':self.length/1000,'conv_centimeters':self.length/100000,'conv_millimeters':self.length/1e+6,
-                    'conv_inches':self.length/39370.079}
+                    'conv_meters':self.length/1000,'conv_centimeters':self.length/100000,
+                    'conv_millimeters':self.length/1e+6,'conv_inches':self.length/39370.079}
        
-        if self.unit == 'inches':
+       if self.unit == 'inches':
             return conv_list['conv_inches']
-        elif self.unit == 'feet':
+       elif self.unit == 'feet':
             return conv_list['conv_feet']
-        elif self.unit == 'yards':
+       elif self.unit == 'yards':
             return conv_list['yards']
-        elif self.unit == 'miles':
+       elif self.unit == 'miles':
             return conv_list['miles']
-        elif self.unit == 'meters':
+       elif self.unit == 'meters':
             return conv_list['conv_meters']
-        elif self.unit == 'centimeters':
+       elif self.unit == 'centimeters':
             return conv_list['conv_centimeters']
-        elif self.unit == 'millimeters':
+       elif self.unit == 'millimeters':
             return conv_list['conv_millimeters']
 
 
     def meters(self):
         conv_list = {'conv_feet':self.length/3.281,'conv_yards':self.length/1.094,'conv_miles':self.length*1609.344,
-        'conv_kmeters':self.length/1000,'conv_inches':self.length/39.37,'conv_centimeters':self.length/100
+        'conv_kmeters':self.length/1000,'conv_inches':self.length/39.37,'conv_centimeters':self.length/100,
         'conv_millimeters':self.length/1000}
 
         if self.unit == 'inches':
@@ -131,6 +133,8 @@ class Converter:
             return conv_list['conv_centimeters']
         elif self.unit == 'millimeters':
             return conv_list['conv_millimeters']
+
+
 
     def centimeters(self):
         conv_list = {'conv_feet':self.length*30.48,'conv_yards':self.length*91.44,'conv_miles':self.length*160934.4,
@@ -150,12 +154,14 @@ class Converter:
         elif self.unit == 'meters':
             return conv_list['conv_meters']
         elif self.unit == 'millimeters':
-            return conv_list['conv_millimeters'] 
+            return conv_list['conv_millimeters']
+
+        
     
     def millimeters(self):
         conv_list = {'conv_feet':self.length*304.8,'conv_yards':self.length*914.4,'conv_miles':self.length*1.609e+6,
-        'conv_kmeters':self.length*1e+6,'conv_inches':self.length*25.4,'conv_centimeters' = self.length*10,
-        'conv_meters' = self.length*1000}
+        'conv_kmeters':self.length*1e+6,'conv_inches':self.length*25.4,'conv_centimeters':self.length*10,
+        'conv_meters':self.length*1000}
         
         if self.unit == 'inches':
             return conv_list['conv_inches']
